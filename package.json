@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "build:dev": "vue-tsc && vite build --mode dev",
+    "build:pro": "vue-tsc && vite build --mode pro",
     "preview": "vite preview",
     "prettier:comment": "自动格式化当前目录下的所有文件",
     "prettier": "prettier --write",
