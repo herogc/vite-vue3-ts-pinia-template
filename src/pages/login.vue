@@ -26,11 +26,6 @@
         </a-button>
       </a-form-item>
     </a-form>
-    <a-mentions v-model="value" autofocus @select="onSelect">
-      <a-mentions-option value="afc163">afc163</a-mentions-option>
-      <a-mentions-option value="zombieJ">zombieJ</a-mentions-option>
-      <a-mentions-option value="yesmeck">yesmeck</a-mentions-option>
-    </a-mentions>
     <h5>{{ userStore.name }}</h5>
     <h3>Mouse: {{ x }} x {{ y }}</h3>
     <a-space wrap>
@@ -62,14 +57,6 @@ const handleFinish = (values: Object) => {
 };
 const handleFinishFailed = (errors: Object) => {
   console.log(errors);
-};
-//
-const value = ref<string>('@afc163');
-watch(value, () => {
-  console.log('value', value);
-});
-const onSelect = (option: { value: string }) => {
-  console.log('select', option);
 };
 </script>
 <style lang="scss" scoped></style>

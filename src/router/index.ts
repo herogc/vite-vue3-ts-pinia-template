@@ -20,6 +20,16 @@ const routes: Array<RouteRecordRaw> = [
           requireAuth: true
       },
       component: () => import('@/pages/index.vue')
+  },
+  {
+    path: '/',
+    name: 'Test',
+    meta: {
+        title: '测试',
+        keepAlive: true,
+        requireAuth: true
+    },
+    component: () => import('@/pages/test.vue')
   }
 ]
 const router = createRouter({
